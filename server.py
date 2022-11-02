@@ -11,7 +11,10 @@ users_in_room = {}
 rooms_sid = {}
 names_sid = {}
 
-
+@app.route("/")
+def home_view():
+        return "<h1>Welcome to Geeks for Geeks</h1>"
+    
 @app.route("/join", methods=["GET"])
 def join():
     display_name = request.args.get('display_name')
