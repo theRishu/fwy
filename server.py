@@ -94,4 +94,4 @@ def on_data(data):
 
 
 if any(platform.win32_ver()):
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=False)
