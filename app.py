@@ -101,5 +101,5 @@ def on_data(data):
 
 if __name__ == "__main__":
 
-        socketio.run(app, debug=False)
-	app.run(host='0.0.0.0', port=5000)
+  
+	socketio.app.run(host='0.0.0.0', port=5000)
