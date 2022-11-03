@@ -103,17 +103,12 @@ def on_data(data):
 
 
 
-https_server.start()
-
-http_server = WSGIServer(('0.0.0.0', 5000), app)
 
 
-while True:
-    gevent.sleep(60)
 
-"""
+
     
 if __name__ == "__main__":
 	allow_unsafe_werkzeug=True
 	socketio.run(app)
-"""
+
