@@ -97,4 +97,9 @@ def on_data(data):
 
 
 
-socketio.run(app, debug=False)
+
+
+if __name__ == "__main__":
+
+        socketio.run(app, debug=False)
+	app.run(host='0.0.0.0', port=5000)
