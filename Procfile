@@ -1,1 +1,1 @@
-command: python app.py
+gunicorn: web app:app
