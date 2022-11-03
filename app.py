@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, session
 from flask_socketio import SocketIO, emit, join_room
-import platform
+import gevent
+from gevent.pywsgi import WSGIServer
+
 
 app = Flask(__name__)
+
+   
+
 app.config['SECRET_KEY'] = "wubba lubba dub dub"
 
 socketio = SocketIO(app)
@@ -98,7 +103,17 @@ def on_data(data):
 
 
 
+https_server.start()
 
+http_server = WSGIServer((HOST, HTTP_PORT), app)
+
+
+while True:
+    gevent.sleep(60)
+
+"""
+    
 if __name__ == "__main__":
 	allow_unsafe_werkzeug=True
 	socketio.run(app)
+"""
