@@ -109,6 +109,5 @@ def on_data(data):
 
     
 if __name__ == "__main__":
-	allow_unsafe_werkzeug=True
-	socketio.run(app)
+	socketio.run(app, host='0.0.0.0')
 
