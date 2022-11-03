@@ -105,7 +105,7 @@ def on_data(data):
 
 https_server.start()
 
-http_server = WSGIServer((HOST, HTTP_PORT), app)
+http_server = WSGIServer(('0.0.0.0', 5000), app)
 
 
 while True:
