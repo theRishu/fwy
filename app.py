@@ -93,6 +93,6 @@ def on_data(data):
             data["type"], sender_sid, target_sid))
     socketio.emit('data', data, room=target_sid)
 
-
-socketio.run(app, host='0.0.0.0')
+if __name__ == '__main__':
+    socketio.run(app)
 
